@@ -1,0 +1,20 @@
+<div id="toast-container" class="toast-top-right">
+  <% if flash.any? %>
+    <% flash.each do |message_type, msg| %>
+      <div class="toast toast-<%= message_type %>" aria-live="polite" style="display: block;">
+        <div class="toast-message">
+          <%= raw msg %>
+        </div>
+      </div>
+    <% end %>
+    <% flash.clear %>
+  <% end %>
+</div>
+
+<% content_for :javascript do %>
+  <script type="text/javascript">
+    $(function () {
+      $(".toast").fadeOut(5000);
+    });
+  </script>
+<% end %>

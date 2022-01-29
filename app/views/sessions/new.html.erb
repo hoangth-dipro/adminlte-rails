@@ -1,0 +1,28 @@
+<!-- /.login-box -->
+<div class="login-box">
+  <div class="login-logo">
+    <%# <%= image_tag("dp-logo.png", height: 250, width: 250) %>   
+    <b>DP PORTAL</b>
+  </div>
+  <!-- /.login-logo -->
+  <div class="card">
+    <div class="card-body login-card-body">
+      <%= render 'sessions/shared/form' %>
+
+      <!-- /.social-auth-links -->
+      <div class="social-auth-links text-center mb-3">
+        <p>- OR -</p>
+        <a href="#" class="btn btn-block btn-danger">
+          <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
+        </a>
+      </div>
+      <!-- /.social-auth-links -->
+
+      <p class="mb-1">
+        <a href="forgot-password.html">I forgot my password</a>
+      </p>
+    </div>
+    <!-- /.login-card-body -->
+  </div>
+</div>
+<!-- /.login-box -->
